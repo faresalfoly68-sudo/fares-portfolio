@@ -13,13 +13,13 @@ import Footer from './components/Footer';
 
 export default function App() {
   const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/fares-cv.pdf';
-    link.download = 'Fares_Waleed_Alfoly_AI_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const link = document.createElement('a');
+  link.href = `${import.meta.env.BASE_URL}fares-cv.pdf`;
+  link.download = 'Fares_Waleed_Alfoly_AI_CV.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   return (
     <div className="min-h-screen bg-[#07090E] text-slate-100 flex flex-col selection:bg-indigo-500/30 selection:text-indigo-300 font-sans">
